@@ -7,15 +7,42 @@ public class Reader{
   String info;
   public static void main(String[] args) throws Exception
   {
-    List<String[][]> list = new ArrayList<String[]>();
+    String parsing = "";
+    ArrayList<Double> r = new ArrayList<>();
+    ArrayList<Double> v = new ArrayList<>();
+    ArrayList<Double> x = new ArrayList<>();
     File file = new File("/Users/alexismayers/Desktop/FILE.txt");
     Scanner s = new Scanner(file);
-
+    char[] line;
+    char c;
+    double addedValue;
     while (s.hasNextLine())
-      System.out.println(s.nextLine());
-
+      parsing = s.nextLine();
+      //System.out.println(parsing);
+      line = parsing.toCharArray();
+      for (int i = 0;i < line.length;i++) {
+        c = line[i];
+        if (c=='r'||c=='v'||c=='x') {
+          addedValue = (double)(line[i+2] + line[i+3] + line[i+4]);
+          if (c=='r'){
+          r.add(addedValue);
+          }
+          else if (c == 'v'){
+          v.add(addedValue);
+          }
+          else{
+          x.add(addedValue);
+          }
+        }
+      }
+      //System.out.println(x);
     }
-
 
 }
 
+//2D array; send to array to be graphed
+//NOT DOING THIS parse at = and ", "
+//reading data coming from the PCB
+//making a file with the data and sending it to us to put through the code
+//FINISH by the end of this week (Due Feb 1st)
+//
