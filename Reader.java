@@ -40,9 +40,3 @@ public class Reader{
 
 }
 
-//2D array; send to array to be graphed
-//NOT DOING THIS parse at = and ", "
-//reading data coming from the PCB
-//making a file with the data and sending it to us to put through the code
-//FINISH by the end of this week (Due Feb 1st)
-//
